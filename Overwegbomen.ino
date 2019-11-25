@@ -5,10 +5,12 @@
 
   AHOB knipperfrequentie is 45 x per minuut
   Dus 90 perioden. 60.000 / 90 = 666
+
+  Dutch Railroad installation blink frequency is 45 times per minute
  */
 #define A_Pole_Left_Side   3
 #define A_Pole_Right_Side  4
-#define B_Pole_Left_Side   5 
+#define B_Pole_Left_Side   5
 #define B_Pole_Right_Side  2
 #define Led_Internal       13
 
@@ -30,11 +32,11 @@ void loop() {
   digitalWrite(B_Pole_Left_Side, HIGH);
   digitalWrite(A_Pole_Right_Side, LOW);
   digitalWrite(B_Pole_Right_Side, LOW);
-  
+
   delay(666);              // wait for a second
 
   digitalWrite(A_Pole_Left_Side, LOW);    // turn the LED off by making the voltage LOW
-  digitalWrite(B_Pole_Left_Side, LOW);    // turn the LED off by making the voltage LOW 
+  digitalWrite(B_Pole_Left_Side, LOW);    // turn the LED off by making the voltage LOW
   digitalWrite(A_Pole_Right_Side, HIGH);
   digitalWrite(B_Pole_Right_Side, HIGH);
 
@@ -43,7 +45,7 @@ void loop() {
 
   }
   digitalWrite(A_Pole_Left_Side, LOW);    // turn the LED off by making the voltage LOW
-  digitalWrite(B_Pole_Left_Side, LOW);    // turn the LED off by making the voltage LOW 
+  digitalWrite(B_Pole_Left_Side, LOW);    // turn the LED off by making the voltage LOW
   digitalWrite(A_Pole_Right_Side, LOW);
   digitalWrite(B_Pole_Right_Side, LOW);
 
@@ -52,5 +54,5 @@ void loop() {
     delay(500);
     digitalWrite(Led_Internal, LOW);
     delay(500);
-  }     
+  }
 }
